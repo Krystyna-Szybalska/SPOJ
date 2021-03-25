@@ -1,0 +1,2 @@
+# SPOJ
+For SPOJ challenges
