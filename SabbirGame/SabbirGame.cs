@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Linq;
 
 namespace SabbirGame
 {
@@ -14,12 +13,18 @@ namespace SabbirGame
             {
                 int levelNumber = Convert.ToInt32(Console.ReadLine());
                 string p = Console.ReadLine();
-                string[] points = p.Split(' ');
-                long[] pointsLong = points.Select(long.Parse).ToArray();
+                string[] points = p.Split(' ');//może tu mu się coś nie podoba?
+                long[] pointsLong = new long[points.Length];
 
-                for (int j = 0; j < levelNumber; j++)
+                for (int j = 0; j < points.Length; j++) //obejście linq funkcji robiącej z tego longi: long[] pointsLong = points.Select(long.Parse).ToArray();
                 {
-                    currentLifePoints += pointsLong[j];
+                    long pointLong = Convert.ToInt64(points[j]);
+                    pointsLong[j] = pointLong;
+                }
+
+                for (int k = 0; k < levelNumber; k++)
+                {
+                    currentLifePoints += pointsLong[k];
                     if (currentLifePoints < minLifePoints) { minLifePoints = currentLifePoints; }
                 }
 
