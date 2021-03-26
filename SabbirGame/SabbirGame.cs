@@ -2,29 +2,29 @@
 
 namespace SabbirGame
 {
-    class Program
+    class SabbirGame
     {
         static void Main(string[] args)
         {
-            int numberOfTestCases = Convert.ToInt32(Console.ReadLine());
+            byte numberOfTestCases = Convert.ToByte(Console.ReadLine());
             long currentLifePoints = 0;
             long minLifePoints = 1;
-            for (int i = 0; i < numberOfTestCases; i++)
+            for (byte i = 0; i < numberOfTestCases; i++)
             {
-                int levelNumber = Convert.ToInt32(Console.ReadLine());
+                short levelNumber = Convert.ToSByte(Console.ReadLine());
                 string p = Console.ReadLine();
-                string[] points = p.Split(' ');//może tu mu się coś nie podoba?
-                long[] pointsLong = new long[points.Length];
+                string[] points = p.Split(' ', StringSplitOptions.RemoveEmptyEntries);
+                int[] pointsInt = new int[points.Length];
 
                 for (int j = 0; j < points.Length; j++) //obejście linq funkcji robiącej z tego longi: long[] pointsLong = points.Select(long.Parse).ToArray();
                 {
-                    long pointLong = Convert.ToInt64(points[j]);
-                    pointsLong[j] = pointLong;
+                    int pointInt = Convert.ToInt32(points[j]);
+                    pointsInt[j] = pointInt;
                 }
 
                 for (int k = 0; k < levelNumber; k++)
                 {
-                    currentLifePoints += pointsLong[k];
+                    currentLifePoints += pointsInt[k];
                     if (currentLifePoints < minLifePoints) { minLifePoints = currentLifePoints; }
                 }
 
