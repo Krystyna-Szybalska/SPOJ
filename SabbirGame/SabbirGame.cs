@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 
 namespace SabbirGame
 {
@@ -13,7 +14,7 @@ namespace SabbirGame
             {
                 currentLifePoints = 0;
                 minLifePoints = 1;
-                short levelNumber = Convert.ToSByte(Console.ReadLine());
+                int levelNumber = Convert.ToInt32(Console.ReadLine());
                 string entryPoints = Console.ReadLine();
                 string[] points = entryPoints.Split(' ', StringSplitOptions.RemoveEmptyEntries);
                 int[] pointsInt = new int[points.Length];
@@ -32,7 +33,6 @@ namespace SabbirGame
 
                 if (minLifePoints > 0) { Console.WriteLine(0); }
                 else { Console.WriteLine(1 - minLifePoints); }
-                
             }
         }
     }
