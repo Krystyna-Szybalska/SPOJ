@@ -16,7 +16,7 @@ namespace SabbirGame
                 string[] points = p.Split(' ', StringSplitOptions.RemoveEmptyEntries);
                 int[] pointsInt = new int[points.Length];
 
-                for (int j = 0; j < points.Length; j++) //obejście linq funkcji robiącej z tego longi: long[] pointsLong = points.Select(long.Parse).ToArray();
+                for (int j = 0; j < points.Length; j++)
                 {
                     int pointInt = Convert.ToInt32(points[j]);
                     pointsInt[j] = pointInt;
