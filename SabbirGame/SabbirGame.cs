@@ -7,13 +7,15 @@ namespace SabbirGame
         static void Main(string[] args)
         {
             byte numberOfTestCases = Convert.ToByte(Console.ReadLine());
-            long currentLifePoints = 0;
-            long minLifePoints = 1;
+            long currentLifePoints;
+            long minLifePoints;
             for (byte i = 0; i < numberOfTestCases; i++)
             {
+                currentLifePoints = 0;
+                minLifePoints = 1;
                 short levelNumber = Convert.ToSByte(Console.ReadLine());
-                string p = Console.ReadLine();
-                string[] points = p.Split(' ', StringSplitOptions.RemoveEmptyEntries);
+                string entryPoints = Console.ReadLine();
+                string[] points = entryPoints.Split(' ', StringSplitOptions.RemoveEmptyEntries);
                 int[] pointsInt = new int[points.Length];
 
                 for (int j = 0; j < points.Length; j++)
@@ -30,8 +32,7 @@ namespace SabbirGame
 
                 if (minLifePoints > 0) { Console.WriteLine(0); }
                 else { Console.WriteLine(1 - minLifePoints); }
-                currentLifePoints = 0;
-                minLifePoints = 1;
+                
             }
         }
     }
