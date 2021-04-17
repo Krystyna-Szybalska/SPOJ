@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SabbirGame", "..\SabbirGame
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Helpers", "..\Helpers\Helpers.csproj", "{6578F768-D06A-449C-934B-1B89EA500642}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HackThePassword", "..\HackThePassword\HackThePassword.csproj", "{11FD19FF-12C7-48C0-93AA-BF0F6CC51EFF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HackThePassword", "..\HackThePassword\HackThePassword.csproj", "{11FD19FF-12C7-48C0-93AA-BF0F6CC51EFF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeJam2", "..\CodeJam2\CodeJam2.csproj", "{DF60B033-AE6D-41C1-A411-A91663EF5163}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{11FD19FF-12C7-48C0-93AA-BF0F6CC51EFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{11FD19FF-12C7-48C0-93AA-BF0F6CC51EFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{11FD19FF-12C7-48C0-93AA-BF0F6CC51EFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF60B033-AE6D-41C1-A411-A91663EF5163}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF60B033-AE6D-41C1-A411-A91663EF5163}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF60B033-AE6D-41C1-A411-A91663EF5163}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF60B033-AE6D-41C1-A411-A91663EF5163}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
