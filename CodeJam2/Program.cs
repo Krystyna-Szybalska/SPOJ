@@ -14,20 +14,20 @@ namespace CodeJam2
                 int score = 1;
                 string B = Console.ReadLine();
                 List<char> input = new List<char>();
-                foreach(char letter in B)
+                foreach (char letter in B)
                 {
                     input.Add(letter);
                 }
 
                 if (player == 'I')
                 {
-                    if(input[0] == 'O' && input[input.Count-1] == 'O')
+                    if (input[0] == 'O' && input[input.Count - 1] == 'O')
                     {
                         player = 'O';
                         score += input.Count;
                     }
 
-                    else if(input[0] == 'I')
+                    else if (input[0] == 'I')
                     {
                         input.RemoveAt(0);
                         player = 'O';
@@ -62,7 +62,8 @@ namespace CodeJam2
                 }
 
 
-                Console.WriteLine("Case #{0}: {1}, {2}", x + 1, player), score);
+                Console.WriteLine("Case #{0}: {1}, {2}", x + 1, player, score);
             }
+        }
     }
 }
