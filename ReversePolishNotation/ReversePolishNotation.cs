@@ -15,6 +15,8 @@ One line for each output element - either the numerical output, or the string "E
 
 using System;
 using System.Collections;
+using System.Globalization;
+using System.Threading;
 
 namespace ReversePolishNotation
 {
@@ -22,15 +24,16 @@ namespace ReversePolishNotation
     {
         static void Main(string[] args)
         {
+            Thread.CurrentThread.CurrentCulture = CultureInfo.CreateSpecificCulture("en-GB");
             string input = Console.ReadLine();
-            Stack results = new Stack();
             do
             {
-                string[] inputArray = input.Split(' ', StringSplitOptions.RemoveEmptyEntries);
-                float result;
+                if (string.IsNullOrEmpty(input)) break;
+                Stack results = new Stack();
+                string[] inputArray = input.Split(Array.Empty<char>(), StringSplitOptions.RemoveEmptyEntries);
                 for (int i = 0; i < inputArray.Length; i++)
                 {
-                    if (float.TryParse(inputArray[i], out result))
+                    if (double.TryParse(inputArray[i], out double result))
                     {
                         results.Push(result);
                     }
@@ -38,23 +41,25 @@ namespace ReversePolishNotation
                     {
                         if (results.Count < 2)
                         {
-                            results.Clear();
                             break;
                         }
                         else
                         {
-                            float second = (float)results.Pop();
-                            float first = (float)results.Pop();
-                            float newResult = UseInputOperator(inputArray[i], first, second);
+                            double second = (double)results.Pop();
+                            double first = (double)results.Pop();
+                            double newResult = UseInputOperator(inputArray[i], first, second);
                             results.Push(newResult);
                         }
                     }
                 }
 
-                if (results.Count != 1) Console.WriteLine("ERROR");
+                if (results.Count != 1)
+                {
+                    Console.WriteLine("ERROR");
+                }
                 else
                 {
-                    double finalResult = Math.Round((float)results.Pop(), 4);
+                    double finalResult = Math.Round((double)results.Pop(), 4);
                     Console.WriteLine(finalResult);
                 }
                 input = Console.ReadLine();
@@ -62,7 +67,7 @@ namespace ReversePolishNotation
 
             while (!string.IsNullOrEmpty(input));
         }
-        public static float UseInputOperator(string logic, float x, float y)
+        public static double UseInputOperator(string logic, double x, double y)
         {
             switch (logic)
             {
