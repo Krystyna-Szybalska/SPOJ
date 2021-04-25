@@ -41,7 +41,8 @@ namespace ReversePolishNotation
                     {
                         if (results.Count < 2)
                         {
-                            break;
+                            Console.WriteLine("ERROR");
+                            goto End;
                         }
                         else
                         {
@@ -59,12 +60,12 @@ namespace ReversePolishNotation
                 }
                 else
                 {
-                    double finalResult = Math.Round((double)results.Pop(), 4);
-                    Console.WriteLine(finalResult);
+                    Console.WriteLine(String.Format("{0:F4}", results.Pop()));
                 }
+                End:
                 input = Console.ReadLine();
-            } 
-
+            }
+            
             while (!string.IsNullOrEmpty(input));
         }
         public static double UseInputOperator(string logic, double x, double y)
