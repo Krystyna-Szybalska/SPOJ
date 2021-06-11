@@ -41,8 +41,8 @@ namespace ReversePolishNotation
                     {
                         if (results.Count < 2)
                         {
-                            Console.WriteLine("ERROR");
-                            goto End;
+                            results.Clear();
+                            break;
                         }
                         else
                         {
@@ -62,7 +62,6 @@ namespace ReversePolishNotation
                 {
                     Console.WriteLine(String.Format("{0:F4}", results.Pop()));
                 }
-                End:
                 input = Console.ReadLine();
             }
             

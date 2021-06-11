@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Helpers", "..\Helpers\Helpe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HackThePassword", "..\HackThePassword\HackThePassword.csproj", "{11FD19FF-12C7-48C0-93AA-BF0F6CC51EFF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReversePolishNotation", "..\ReversePolishNotation\ReversePolishNotation.csproj", "{33827C11-3A3A-4E91-A3EB-83E7005162AD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReversePolishNotation", "..\ReversePolishNotation\ReversePolishNotation.csproj", "{33827C11-3A3A-4E91-A3EB-83E7005162AD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

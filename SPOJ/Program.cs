@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace SPOJ
 {
@@ -7,6 +8,8 @@ namespace SPOJ
     {
         static void Main(string[] args)
         {
+
+
         }
     }
 }
